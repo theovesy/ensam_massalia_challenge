@@ -27,7 +27,7 @@ def fill_obj_data_file(csv_line):
 	
 	obj_class = 0	# Only one object type to detect
 	
-	box_data = [str(obj_class), str((xmax + xmin)/2), str((ymax + ymin)/2), str((xmax - xmin)/IMG_SIZE[0]), str((ymax - ymin)/IMG_SIZE[0])] 
+	box_data = [str(obj_class), str((xmax + xmin)/(2*IMG_SIZE[0])), str((ymax + ymin)/(2*IMG_SIZE[1])), str((xmax - xmin)/IMG_SIZE[0]), str((ymax - ymin)/IMG_SIZE[1])] 
 	
 	with open("labels/" + img_name + ".txt", 'a') as f:
 		f.write(' '.join(box_data) + "\n")
