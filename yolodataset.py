@@ -15,9 +15,9 @@ def get_args(i):
 # Pour generer les lignes a ajouter dans les fichiers texte de chaque image
 def yolo_line(row):
     line = "0 "
-    line += str(((int(row[3])-int(row[1]))/2)/img_size[0])
+    line += str(((int(row[3])+int(row[1]))/2)/img_size[0])
     line += " "
-    line += str(((int(row[4])-int(row[2]))/2)/img_size[1])
+    line += str(((int(row[4])+int(row[2]))/2)/img_size[1])
     line += " "
     line += str((int(row[3])-int(row[1]))/(img_size[0]))
     line += " "
