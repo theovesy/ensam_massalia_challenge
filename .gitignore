@@ -1,5 +1,6 @@
 darknet/
-results/
+train_results/
 massalia_darknet/yolov4.conv.137
 train.ps1 - Raccourci.lnk
 test.ps1 - Raccourci.lnk
+test_unique_img.ps1 - Raccourci.lnk

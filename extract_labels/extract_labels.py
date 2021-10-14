@@ -53,6 +53,7 @@ def fill_obj_data_file(csv_line):
 	
 def main(filename):
 	extract_line(filename)
+	print("Done !")
 
 # Script command : python extract_labels.py <filename>
 if __name__ == "__main__":
