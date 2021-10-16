@@ -23,7 +23,9 @@ def fill_csv(csv_name, img_name, data_lines):
         line_count = 0
         for line in data_lines:
             data_list = [img_name] + line.split()[1:]   # data line to write in the csv file
-            data_list[1],data_list[2], data_list[3], data_list[4] = convert2aboslute(data_list)
+            data_list[1],data_list[2], data_list[3], data_list[4] = convert2aboslute(data_list)     # absolute coordinates
+            data_list[-1] = float(data_list[-1]) / 100  # 0 < score < 1
+            data_list[-1] = str("%.2f" % data_list[-1]) # convert to str with only 2 decimals
             writer.writerow(data_list)
             line_count += 1
         print(str(line_count) + "line(s) writen for " + img_name)
