@@ -38,6 +38,16 @@ def convert2aboslute(relative):
     xmax = int(L * (x + 0.5 * w))
     ymin = int(l * (y - 0.5 * h))
     ymax = int(l * (y + 0.5 * h))
+
+    # No bbox outside the image
+    if xmin <= 0:
+        xmin = 1
+    if ymin <= 0:
+        ymin = 1
+    if xmax >= 512:
+        xmax = 511
+    if ymax >= 512:
+        ymax = 511
     
     return str(xmin), str(ymin), str(xmax), str(ymax)
 
