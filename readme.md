@@ -8,12 +8,12 @@ Il faut déplacer les fichiers de darknet_massalia/ vers la racine darknet/ de A
 
 
 ## Commande d'entrainement :
-./darknet detector train <data_file> <config_file> <pretrained_weight_file>
+_./darknet detector train <data_file> <config_file> <pretrained_weight_file>_
 
 Fichier pré-entrainé : https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
 
-## Dans notre cas la commande d'entrainement est :
-./darknet detector train data/obj.data cfg/yolo-obj.cfg yolov4.conv.137 -map
+**Dans notre cas la commande d'entrainement est :**
+_./darknet detector train data/obj.data cfg/yolo-obj.cfg yolov4.conv.137 -map_
 
 
-Commande de test :
+## Commande de test :
