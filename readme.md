@@ -1,14 +1,19 @@
-# Database pour YOLO
+# Utilisation de Darknet & Yolo_v4 pour la détection d'antennes réseau sur des images satellites
 
-Yolo utilise un format different pour les bounding box que celui fourni par le challenge :
+Réalisé pour le Orange MassalIA Challenge
 
-Il lui faut pour chaque image un fichier texte avec les coordonnées des rectangles dedans avec ce format :
+https://github.com/AlexeyAB/darknet
 
-```
-<object-class> <x_center> <y_center> <width> <height>
-```
+Il faut déplacer les fichiers de darknet_massalia/ vers la racine darknet/ de AlexeyAB pour notre utilisation.
 
-Pour nous object-class sera simplement 0 parce qu'on ne veux reconnaitre qu'un type d'objet.
-x_center et y_center sont les coordonnées du centre de la bounding box
-width et height sont la largeur et la hauteur de la bounding box divisée par la largeure ou longueur totale de l'image. Sachant que chaque image fait 512x512.
 
+Commande d'entrainement :
+./darknet detector train <data_file> <config_file> <pretrained_weight_file>
+
+Fichier pré-entrainé : https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
+
+  Dans notre cas la commande d'entrainement est :
+  ./darknet detector train data/obj.data cfg/yolo-obj.cfg yolov4.conv.137 -map
+
+
+Commande de test :
