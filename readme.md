@@ -12,8 +12,8 @@ Commande d'entrainement :
 
 Fichier pré-entrainé : https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
 
-  Dans notre cas la commande d'entrainement est :
-  ./darknet detector train data/obj.data cfg/yolo-obj.cfg yolov4.conv.137 -map
+&emspDans notre cas la commande d'entrainement est :
+&emsp./darknet detector train data/obj.data cfg/yolo-obj.cfg yolov4.conv.137 -map
 
 
 Commande de test :
