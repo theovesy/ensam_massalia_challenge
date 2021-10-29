@@ -13,6 +13,7 @@ _./darknet detector train <data_file> <config_file> <pretrained_weight_file>_
 Fichier pré-entrainé : https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
 
 **Dans notre cas la commande d'entrainement est :**
+
 _./darknet detector train data/obj.data cfg/yolo-obj.cfg yolov4.conv.137 -map_
 
 
